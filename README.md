@@ -1,1 +1,0 @@
-# rick-mccoy.github.io

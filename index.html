@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>June Young Yi - Resume</title>
+    <style>
+        /* --- GLOBAL VARIABLES & RESET --- */
+        :root {
+            --primary-color: #000;
+            /* Main text */
+            --link-color: #004ba0;
+            /* Your 'darkblue' */
+            --secondary-color: #555;
+            /* Dates/Locations */
+            --bg-color: #fff;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --max-width: 850px;
+            /* Approx A4 width on screen */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--primary-color);
+            background-color: #f4f4f4;
+            /* Light gray bg outside the paper */
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        /* --- PAPER CONTAINER --- */
+        .resume-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            background: var(--bg-color);
+            padding: 40px 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        /* --- LINKS --- */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header-left h1 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .header-left p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.95rem;
+        }
+
+        .header-right p {
+            margin-bottom: 3px;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 12px;
+            padding-bottom: 3px;
+            color: #222;
+        }
+
+        p {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* --- ROLES & JOBS (The Flexbox Magic) --- */
+        .job-entry {
+            margin-bottom: 15px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .role-title {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .role-date,
+        .role-location {
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+        }
+
+        .company-name {
+            font-style: italic;
+        }
+
+        /* --- LISTS --- */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* --- UTILS --- */
+        .note {
+            font-size: 0.9rem;
+            background: #f9f9f9;
+            padding: 8px;
+            border-left: 3px solid #ccc;
+            margin-top: 5px;
+        }
+
+        /* --- RESPONSIVE MOBILE DESIGN --- */
+        @media (max-width: 600px) {
+            body {
+                padding: 0;
+            }
+
+            .resume-container {
+                padding: 20px;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .header-right {
+                text-align: left;
+                margin-top: 15px;
+            }
+
+            .row {
+                flex-direction: column;
+                margin-bottom: 2px;
+            }
+
+            .role-date,
+            .role-location {
+                display: block;
+                margin-bottom: 2px;
+            }
+        }
+
+        /* --- PRINT STYLES --- */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            /* Optional: Force black links for print */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-container">
+
+        <header>
+            <div class="header-left">
+                <h1>June Young Yi</h1>
+                <p>Audio ML Researcher & Engineer</p>
+            </div>
+            <div class="header-right">
+                <p>Seoul, Republic of Korea</p>
+                <p><a href="mailto:julianyi0417@gmail.com">julianyi0417@gmail.com</a> | +82-10-9909-6392</p>
+                <p>
+                    <a href="https://github.com/Rick-McCoy">github.com/Rick-McCoy</a> |
+                    <a href="https://linkedin.com/in/juneyoungyi">LinkedIn</a> |
+                    <a href="https://scholar.google.com/citations?user=zE-1N1MAAAAJ">Google Scholar</a>
+                </p>
+            </div>
+        </header>
+
+        <section>
+            <h2>Summary</h2>
+            <p>
+                <strong>Audio ML Researcher & Engineer</strong> with <strong>4+ years of industry experience</strong>
+                and <strong>NeurIPS 2025</strong> authorship. Specializes in <strong>Generative Audio</strong> and
+                <strong>Data-Centric AI</strong>, engineering the synthetic pipelines and fine-tuning infrastructure
+                that enabled the open-source release of the Supertonic TTS system. Proven ability to bridge academic
+                research with production-grade deployment.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+
+            <div class="job-entry">
+                <div class="row">
+                    <span class="role-title"><a href="https://cse.snu.ac.kr/">Seoul National University (SNU)</a></span>
+                    <span class="role-date">Feb 2019 – Present</span>
+                </div>
+                <div class="row">
+                    <span class="company-name">B.S. in Computer Science and Engineering</span>
+                    <span class="role-location">Seoul, Korea</span>
+                </div>
+                <p style="margin-top: 5px;">GPA: 3.94 / 4.3 (Major), 3.91 / 4.3 (Overall) (&approx;96.1/100)</p>
+
+                <div class="note">
+                    <strong>Note on Timeline:</strong> Served 3 years as <strong>Alternative Research Personnel</strong>
+                    (in lieu of mandatory military service in South Korea), working full-time in ML R&D at NGINE Studios
+                    (2021–2024).
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Publications & Preprints</h2>
+            <ul>
+                <li>
+                    <strong>SAO-Instruct: Free-form Audio Editing using Natural Language Instructions</strong>.
+                    Ungersböck, Grötschla, Lanzendörfer, <strong>Yi</strong>, Choi, Wattenhofer. <em><a href="https://neurips.cc/virtual/2025/poster/119121">NeurIPS 2025</a> (main
+                        track, poster)</em>. <a href="https://arxiv.org/abs/2510.22795"><em>arXiv:2510.22795</em></a>. <a href="https://github.com/eth-disco/sao-instruct">GitHub</a>. Contribution: manual-edit synthetic data
+                    pipeline (categories + code).
+                </li>
+                <li>
+                    <strong>Training Flow Matching Models with Reliable Labels via Self-Purification</strong>. Kim, Yu,
+                    <strong>Yi</strong>, Lee. <a href="https://arxiv.org/abs/2509.19091"><em>arXiv:2509.19091</em></a>. Submitted to ICASSP 2026 (Main Track, under
+                    review).
+                </li>
+                <li>
+                    <strong>Robust TTS Training via Self-Purifying Flow Matching</strong>. <strong>Yi</strong> et al.
+                    <a href="https://arxiv.org/abs/2512.17293"><em>arXiv:2512.17293</em></a>. ICASSP 2026 SPGC (WildSpoof Challenge) Submission.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+
+            <div class="job-entry">
+                <div class="row">
+                    <span class="role-title">Researcher (Part time, while senior at SNU)</span>
+                    <span class="role-date">Apr 2025 – Dec 2025</span>
+                </div>
+                <div class="row">
+                    <span class="company-name"><a href="https://supertone.ai/">Supertone</a> (HYBE) — Research Team</span>
+                    <span class="role-location">Seoul, Korea</span>
+                </div>
+                <ul>
+                    <li><strong>Supertonic (Open-Source Release):</strong> Engineered the synthetic data pipeline and
+                        fine-tuning framework that cleared the path for public release; enabled the model to handle
+                        complex real-world edge cases (<a href="https://github.com/supertone-inc/supertonic">GitHub</a>,
+                        <a href="https://huggingface.co/Supertone/supertonic">HF</a>, <a
+                            href="https://pypi.org/project/supertonic">PyPI</a>).</li>
+                    <li><strong>Model Robustness:</strong> Resolved critical pronunciation failures (abbreviations,
+                        scientific units) in the 66M-parameter architecture via category-specific synthetic generation +
+                        ASR validation; validated on internal hard-case sets.</li>
+                    <li><strong>Neural Codec:</strong> Prototyped a high-fidelity 44.1kHz speech codec operating at an
+                        ultra-low <strong>12.5Hz framerate</strong>, enabling highly efficient tokenization for
+                        downstream generation tasks.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="row">
+                    <span class="role-title">Machine Learning Engineer (On leave from SNU)</span>
+                    <span class="role-date">Sep 2024 – Dec 2024</span>
+                </div>
+                <div class="row">
+                    <span class="company-name"><a href="https://www.optimizerai.xyz/">OptimizerAI</a> (Text-to-Audio Startup)</span>
+                    <span class="role-location">Seoul, Korea</span>
+                </div>
+                <ul>
+                    <li><strong>End-to-End Ownership:</strong> Architected and implemented the V2 text-to-audio system
+                        (SFX-focused); managed the full lifecycle from data synthesis and codec training to evaluation
+                        and deployment.</li>
+                    <li>Trained at scale on 8&times;H100 for &sim;2 weeks; optimized sampling (5s generated in 1–2s) and
+                        managed a six-figure GPU-credit budget.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="row">
+                    <span class="role-title">Team Leader / ML Engineer (Technical Research)</span>
+                    <span class="role-date">Aug 2021 – Sep 2024</span>
+                </div>
+                <div class="row">
+                    <span class="company-name">NGINE Studios (<a href="https://www.nexon.com/">NEXON</a> subsidiary)</span>
+                    <span class="role-location">Seoul, Korea</span>
+                </div>
+                <ul>
+                    <li><strong>Sparse Tabular Modeling:</strong> Replaced dense feature representations with sparse
+                        embeddings, reducing memory footprint by 100–1000&times; and enabling training on
+                        ultra-high-dimensional user features previously impossible to fit in memory.</li>
+                    <li><strong>Internal TTS:</strong> rebuilt mel-based TTS + vocoder pipeline and increased training
+                        throughput by &ge;10&times;; supported internal narration and an accessibility deployment in a
+                        live title.</li>
+                    <li>Led a &sim;15-person team: project prioritization, stakeholder communication with game teams,
+                        and transition-to-support for delivered systems.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Awards & Scholarship</h2>
+            <div class="job-entry">
+                <ul>
+                    <li>ICASSP 2026 SPGC (WildSpoof Challenge TTS Track) — 1st Place in WER, 2nd in MOS</li>
+                    <li>ElevenLabs &times; a16z Worldwide Hackathon (Seoul Region 1st Place, <a
+                            href="https://devpost.com/software/voice-guardian">Voice Guardian</a>)</li>
+                    <li>Samsung Humantech Paper Award (Bronze, 2018; National research competition)</li>
+                    <li>KFAS Undergraduate Scholarship (Highly selective, full merit-based support)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="job-entry">
+                <p><strong>Languages & Frameworks:</strong> Python, PyTorch, PyTorch Lightning</p>
+                <p><strong>Deployment & Tools:</strong> Docker, Kubernetes, Linux/Bash, Git, CI/CD</p>
+                <p><strong>Audio:</strong> TTS, Text-To-Audio, ASR, Neural Codecs, Audio Language Models</p>
+                <p><strong>Languages:</strong> Korean (native), English (fluent; TOEFL 117/120)</p>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
